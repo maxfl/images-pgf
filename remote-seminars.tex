@@ -1,0 +1,15 @@
+\documentclass[png]{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  \pgfdeclareimage[width=10mm]{virus}{./coronavirus.png};
+  \draw node (bkg) {\includegraphics{./AlexNoriega_destaque.png}};
+
+  \draw (bkg.north west) node[below right] {\pgfuseimage{virus}};
+  \draw (bkg.north east) node[below left]  {\pgfuseimage{virus}};
+  \draw (bkg.south west) node[above right] {\pgfuseimage{virus}};
+  \draw (bkg.south east) node[above left]  {\pgfuseimage{virus}};
+\end{tikzpicture}
+\end{document}
